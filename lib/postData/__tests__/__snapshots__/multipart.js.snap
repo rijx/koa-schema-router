@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Multipart basic use 1`] = `
+Object {
+  "body": Object {
+    "hello": "world",
+    "test": undefined,
+  },
+  "dummyProcessor": Array [
+    Object {
+      "contentType": "type/png",
+      "encoding": "base64",
+      "fileName": "test.png",
+      "stream": "[Stream]",
+    },
+  ],
+}
+`;
+
+exports[`Multipart missing processor 1`] = `[Error: No file processor for test]`;

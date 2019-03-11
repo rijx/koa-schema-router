@@ -1,0 +1,49 @@
+{
+  "name": "koa-schema-router",
+  "description": "JSON schema based router for Koa. Includes request parsing, validation and response serialization.",
+  "version": "1.0.0",
+  "main": "lib",
+  "scripts": {
+    "check-deps": "cat package.json | node bin/check-deps",
+    "check-deps-staged": "git show :package.json | node bin/check-deps",
+    "check-eslint-config": "eslint --print-config . | eslint-config-prettier-check",
+    "eslint": "npm run check-eslint-config && eslint --ignore-path .gitignore .",
+    "eslint-staged": "npm run check-eslint-config && git diff --name-only --cached \"**/*.js\" | xargs -0 sh -c 'git show :$0 | eslint --stdin --stdin-filename $0'",
+    "lint": "npm run check-deps && npm run eslint",
+    "lint-staged": "npm run check-deps-staged && npm run eslint-staged",
+    "lint-fix": "prettier --ignore-path .gitignore --write \"**/*.{js,json,yml,yaml,scss,md}\"",
+    "test": "npm run test-units && npm run test-integration",
+    "test-units": "jest",
+    "test-integration": "node tests/integration",
+    "release": "semantic-release -e ./.releaserc.js"
+  },
+  "dependencies": {
+    "ajv": "6.10.0",
+    "busboy": "0.3.0",
+    "co-body": "6.0.0",
+    "content-type": "1.0.4",
+    "fast-json-stringify": "1.11.3",
+    "find-my-way": "2.0.1",
+    "http-errors": "1.7.2"
+  },
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "6.1.0",
+    "@semantic-release/git": "7.0.8",
+    "@semantic-release/npm": "5.1.4",
+    "axios": "0.18.0",
+    "conventional-changelog-eslint": "3.0.1",
+    "eslint": "5.14.1",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-jest": "22.3.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "jest": "24.1.0",
+    "koa": "2.7.0",
+    "prettier": "1.16.4",
+    "semantic-release": "15.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/rijx/koa-schema-router.git"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,28 @@
+stages:
+  - test
+  - release
+
+test:
+  stage: test
+  image: node:8.8.1
+  coverage: /Statements\s*:\s+([0-9.]+)/
+  script:
+    - npm install
+    - npm run lint
+    - npm run test
+
+release:
+  stage: release
+  image: node:8.8.1
+  only:
+    - master
+  script:
+    - eval `ssh-agent -s`
+    - echo "$GIT_SSH_RELEASE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - git config user.name "$GITLAB_USER_NAME"
+    - git config user.email "$GITLAB_USER_EMAIL"
+    - "[[ -d ~/.ssh ]] || mkdir ~/.ssh"
+    - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - npm install
+    - NPM_TOKEN=$NPM_PUBLISH_TOKEN npm run release -- --repository-url git@gitlab.com:$CI_PROJECT_PATH

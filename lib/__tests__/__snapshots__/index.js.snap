@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Router define single route with schema 1`] = `
+Array [
+  "GET",
+  "/",
+  undefined,
+  Object {
+    "schema": Object {
+      "request": Object {
+        "body": Object {
+          "type": "object",
+        },
+        "params": Object {
+          "type": "object",
+        },
+        "query": Object {
+          "type": "object",
+        },
+      },
+      "response": Object {
+        "200": Object {
+          "type": "object",
+        },
+      },
+    },
+    "serializers": Map {
+      "200" => undefined,
+    },
+    "validators": Object {
+      "body": undefined,
+      "params": undefined,
+      "query": undefined,
+    },
+  },
+]
+`;
+
+exports[`Router define single route without schema 1`] = `
+Array [
+  Array [
+    "GET",
+    "/",
+    undefined,
+    Object {
+      "schema": undefined,
+      "serializers": Map {},
+      "validators": Object {
+        "body": undefined,
+        "params": undefined,
+        "query": undefined,
+      },
+    },
+  ],
+]
+`;
