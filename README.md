@@ -1,6 +1,6 @@
 # koa-schema-router
 
-![build status](https://gitlab.com/rijx/koa-schema-router/badges/master/build.svg?style=flat) ![test coverage](https://gitlab.com/rijx/koa-schema-router/badges/master/coverage.svg?style=flat) ![npm version](https://img.shields.io/npm/v/koa-schema-router.svg)
+![build status](https://gitlab.com/rijx/koa-schema-router/badges/master/build.svg?style=flat) ![test coverage](https://gitlab.com/rijx/koa-schema-router/badges/master/coverage.svg?style=flat) ![npm version](https://img.shields.io/npm/v/koa-schema-router.svg) ![minified size](https://img.shields.io/bundlephobia/min/koa-schema-router.svg) ![MIT licensed](https://img.shields.io/npm/l/koa-schema-router.svg)
 
 JSON schema based router for Koa. Includes request parsing, validation and response serialization.
 
