@@ -1,7 +1,7 @@
 {
   "name": "koa-schema-router",
   "description": "JSON schema based router for Koa. Includes request parsing, validation and response serialization.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib",
   "scripts": {
     "check-deps": "cat package.json | node bin/check-deps",
