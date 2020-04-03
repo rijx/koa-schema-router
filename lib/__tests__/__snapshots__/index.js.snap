@@ -25,7 +25,7 @@ Array [
       },
     },
     "serializers": Map {
-      "200" => undefined,
+      200 => undefined,
     },
     "validators": Object {
       "body": undefined,
