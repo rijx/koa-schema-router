@@ -21,7 +21,7 @@
     "ajv": "6.10.0",
     "busboy": "^0.3.1",
     "fast-json-stringify": "1.15.3",
-    "find-my-way": "2.0.1",
+    "find-my-way": "2.2.5",
     "json-schema-traverse": "^0.4.1",
     "koa-compose": "^4.1.0",
     "lodash": "^4.17.15",
